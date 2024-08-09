@@ -1,95 +1,111 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
+
+const Header = () => {
+  return (
+    <header className={styles.header}>
+      <div>
+        <Image
+          src="/st_joes_logo.png"
+          alt="st joes logo"
+          layout="responsive"
+          width={550}
+          height={73}
+        />
+      </div>
+    </header>
+  )
+}
+
+const Schedule = () => {
+  return (
+    <div>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTv7RfXUCqamZFcIdk1x9daTEbqQ8825xXDvPYpsfbLGNvDhzt4ijBkISMsCUFrmDC3_n36BzZWLXdk/pubhtml?widget=true&amp;headers=false"
+        title="schedule"
+        width={650}
+        height={550}
+      />
+    </div>
+  );
+}
+
+const Notes = () => {
+  return (
+    <div>
+      <iframe
+        src="https://docs.google.com/document/d/e/2PACX-1vS0eVwkYkdeRQ6cmJRmAVHqUaYbY-K11lni1ycI9TCYJDQKiTZv-uHWXcqSySJp4vHkNBsBTPOFOy0C/pub?embedded=true"
+        title="notes"
+        width={650}
+        height={400}
+      />
+    </div>
+  );
+}
+
+const Contact = () => {
+  return (
+    <>
+      <div className={styles.contactContainer}>
+        <div>
+          <h3>Coaches</h3>
+          <div>
+            <p>Raul</p>
+            <p><a href="mailto:email@gmail.com">placeholder@gmail.com</a></p>
+          </div>
+          <div>
+            <p>Paul Leventis</p>
+            <p><a href="mailto:email@gmail.com">placeholder@gmail.com</a></p>
+          </div>
+        </div>
+        <div>
+          <h3>Faculty</h3>
+          <div>
+            <p>Principle: Erinn Dougherty</p>
+          </div>
+          <div>
+            <p>Athletic Director: Tomm Mott</p>
+            <p><a href="mailto:tmott@sjhsknight.com">tmott@sjhsknights.com</a></p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+
+}
+const Footer = () => {
+  return (
+    <div>
+      <ul>
+        <li>4120 S Bradley Rd, Santa Maria, CA 93455</li>
+        <li>School Phone: (805) 937-2038 | Fax: 805-937-4248</li>
+      </ul>
+    </div>
+  )
+}
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      <Header />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className={styles.frame}>
+        <Schedule />
+      </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <section className={styles.frame}>
+        <Notes />
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <section className={styles.contact}>
+        <Contact />
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+      <section className={styles.footer}>
+        <Footer />
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }
