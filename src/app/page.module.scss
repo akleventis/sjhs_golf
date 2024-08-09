@@ -22,22 +22,22 @@
 }
 
 .contact {
+  font-size: small;
   display: flex;
   text-align: center;
   justify-content: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .contactContainer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem; /* Adjusts space between blocks */
 
   div {
     margin-top: 1em;
     flex: 1;
-    min-width: 300px; /* Ensures each block has a minimum width */
+    min-width: 300px;
   }
 
   @media only screen and (max-width: 768px) {

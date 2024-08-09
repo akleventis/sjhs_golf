@@ -50,7 +50,7 @@ const Contact = () => {
         <div>
           <h3>Coaches</h3>
           <div>
-            <p>Raul</p>
+            <p>Raul Birch</p>
             <p><a href="mailto:email@gmail.com">placeholder@gmail.com</a></p>
           </div>
           <div>
@@ -64,15 +64,15 @@ const Contact = () => {
             <p>Principle: Erinn Dougherty</p>
           </div>
           <div>
-            <p>Athletic Director: Tomm Mott</p>
+            <p>Athletic Director: Tom Mott</p>
             <p><a href="mailto:tmott@sjhsknight.com">tmott@sjhsknights.com</a></p>
           </div>
         </div>
       </div>
     </>
   )
-
 }
+
 const Footer = () => {
   return (
     <div>
