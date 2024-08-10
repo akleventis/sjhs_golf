@@ -40,6 +40,10 @@
     min-width: 300px;
   }
 
+  h3 + div {
+    margin-top: .5em;
+  }
+
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;

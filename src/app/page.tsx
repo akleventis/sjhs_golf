@@ -50,14 +50,14 @@ const Contact = () => {
         <div>
           <h3>Coaches</h3>
           <div>
-            <p>Raul Birch</p>
-            <p><a href="mailto:rrbirc87@gmail.com">rrbirc87@gmail.com</a></p>
-            <p>805-268-4561</p>
-          </div>
-          <div>
             <p>Paul Leventis</p>
             <p><a href="mailto:pleventis1@gmail.com">pleventis1@live.com</a></p>
             <p>805-264-2517</p>
+          </div>
+          <div>
+            <p>Raul Birch</p>
+            <p><a href="mailto:rrbirc87@gmail.com">rrbirc87@gmail.com</a></p>
+            <p>805-268-4561</p>
           </div>
         </div>
         <div>
